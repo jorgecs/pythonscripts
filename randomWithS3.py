@@ -24,7 +24,7 @@ def random_number_aws(machine, shots):  # noqa: E501
     ######
     #RELLENAR S3_FOLDER_ID#
     ######
-    s3_folder = (sys.argv[1], sys.argv[2]) #bucket name, folder name
+    s3_folder = ('amazon-braket-jorgecs', 'api') #bucket name, folder name
     ######
     circuit = Circuit()
     circuit.h(0)
@@ -37,7 +37,7 @@ def random_number_aws(machine, shots):  # noqa: E501
 
 
 def execute_quantum_task():
-    return random_number_aws(sys.argv[3],10)
+    return random_number_aws('sv1',10)
 
 
 
