@@ -28,9 +28,9 @@ def random_number_aws(machine, shots):  # noqa: E501
     ######
     circuit = Circuit()
     circuit.z(3) #Acarreo
-    circuit.ccnot(0,1,2)
-    circuit.cnot(0,1)
-    circuit.cnot(1,2)
+    circuit.ccnot(1,2,0)
+    circuit.cnot(2,1)
+    circuit.x(2)
     return executeAWS(s3_folder, gate_machines_arn[machine], circuit, shots)
 
 
