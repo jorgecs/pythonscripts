@@ -27,7 +27,6 @@ def random_number_aws(machine, shots):  # noqa: E501
     s3_folder = ('amazon-braket-jorgecs', 'api') #bucket name, folder name
     ######
     circuit = Circuit()
-    prepareCircuit(circuit)
     circuit.x(0)
     circuit.x(1)
     circuit.x(2)
